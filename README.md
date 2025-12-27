@@ -116,8 +116,8 @@ Pipeline ensures scalability and production-readiness
 ## 🚀 How to Use This Project
 1️⃣ Clone the Repository
 ```
-git clone https://github.com/your-username/ml-model-comparison-gridsearch.git
-cd ml-model-comparison-gridsearch
+git clone https://github.com/muhammadsufyan-khan/ML-Model-Selection-using-GridSearchCV.git
+cd ml-model-comparison-gridsearchCV
 ```
 2️⃣ Install Dependencies
 ```
@@ -129,7 +129,7 @@ jupyter notebook notebooks/model_selection.py
 ```
 OR run the script:
 ```
-python src/model_selection.py
+python model_selection.py
 ```
 ## 🧰 Tools & Libraries Used
 
