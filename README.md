@@ -4,7 +4,7 @@
 The objective of this project is to **build, compare, and evaluate multiple machine learning models** using a **clean, production-ready Scikit-learn Pipeline**.  
 The task focuses on selecting the **best-performing model** based on **F1-score**, which is especially important for **imbalanced classification problems**.
 
----
+
 
 ## 🧠 Why This Project?
 In real-world machine learning applications:
@@ -15,7 +15,6 @@ In real-world machine learning applications:
 
 This project solves all of the above using **Pipeline + GridSearchCV**.
 
----
 
 ## 🧪 Dataset
 - Tabular classification dataset
@@ -25,7 +24,7 @@ This project solves all of the above using **Pipeline + GridSearchCV**.
   - Encoding categorical features
   - Handling missing values
 
----
+
 
 ## ⚙️ Methodology
 
@@ -52,7 +51,6 @@ This ensures **no data leakage** and clean experimentation.
 - Logistic Regression
 - Random Forest Classifier
 
----
 
 ## 🧠 Final Pipeline (Core Idea)
 
