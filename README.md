@@ -1,41 +1,81 @@
-# ML-Model-Selection-using-GridSearchCV
+# 📊 Machine Learning Model Comparison using GridSearchCV
 
 ## 📌 Objective
-The goal of this task is to compare multiple machine learning models
-(Logistic Regression and Random Forest) and select the best model
-using GridSearchCV based on F1-score.
+The objective of this project is to **build, compare, and evaluate multiple machine learning models** using a **clean, production-ready Scikit-learn Pipeline**.  
+The task focuses on selecting the **best-performing model** based on **F1-score**, which is especially important for **imbalanced classification problems**.
 
+---
 
-## 🧠 Methodology
-1. Load and preprocess dataset
-2. Build a pipeline with preprocessing and classifier
-3. Apply GridSearchCV for hyperparameter tuning
-4. Evaluate models using Accuracy and F1 Score
-5. Select the best-performing model
+## 🧠 Why This Project?
+In real-world machine learning applications:
+- Data preprocessing must be reusable and consistent
+- Multiple models need fair comparison
+- Hyperparameters should be optimized automatically
+- Model selection must rely on strong evaluation metrics (not accuracy alone)
 
+This project solves all of the above using **Pipeline + GridSearchCV**.
 
+---
 
-## 📊 Models Used
+## 🧪 Dataset
+- Tabular classification dataset
+- Train/Test split applied
+- Preprocessing includes:
+  - Scaling numerical features
+  - Encoding categorical features
+  - Handling missing values
+
+---
+
+## ⚙️ Methodology
+
+### 1️⃣ Data Preprocessing
+- Numerical features scaled using `StandardScaler`
+- Categorical features encoded using `OneHotEncoder`
+- All preprocessing steps handled inside a **ColumnTransformer**
+
+### 2️⃣ Pipeline Construction
+A single reusable pipeline was built containing:
+- Preprocessing step
+- Classifier (Logistic Regression or Random Forest)
+
+This ensures **no data leakage** and clean experimentation.
+
+### 3️⃣ Model Training & Hyperparameter Tuning
+`GridSearchCV` was used to:
+- Compare multiple models
+- Tune hyperparameters automatically
+- Use **3-fold cross-validation**
+- Select the best model based on **F1-score**
+
+### 4️⃣ Models Compared
 - Logistic Regression
 - Random Forest Classifier
 
+---
+
+## 🧠 Final Pipeline (Core Idea)
+
+```python
+Pipeline([
+    ("preprocessing", preprocessor),
+    ("classifier", model)
+])
+```
+
+## 🔍 Hyperparameter Search Space
+
+Logistic Regression
+
+C: [0.1, 1, 10]
+
+Random Forest
+
+n_estimators: [100, 200]
+
+max_depth: [None, 10, 20]
+
+Total combinations evaluated: 9
+Total model fits (3-fold CV): 27
 
 
-## 🏆 Results
-- Best Model selected via GridSearchCV
-- Achieved high F1-score and accuracy
-- Random Forest performed better in most cases
-
-
-## 📂 Repository Structure
-- `notebooks/` → Jupyter notebook
-- `src/` → Python scripts
-- `data/` → Dataset
-- `results/` → Evaluation outputs
-
-
-## 🚀 Tools & Libraries
-- Python
-- Scikit-learn
-- Pandas
-- NumPy
